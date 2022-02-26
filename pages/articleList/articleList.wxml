@@ -1,0 +1,28 @@
+<view class="articleList">
+    <view class="list-box">
+       <block wx:if="{{articleList.length>0}}" wx:for="{{articleList}}" wx:key="{{item.id||item._id}}">
+       <!-- 跳转 -->
+        <navigator url="/pages/articleDetail/articleDetail?id={{item.id||item._id}}&listId={{listId||item.classifyType.listId}}">
+            <view class="detail">
+            <view class="top">
+                <!-- 文章图片 -->
+                <image class="img" mode="aspectFill" src="{{item.backImage||item.backImg}}"></image>
+            </view>
+            <!-- 文字信息 -->
+            <view class="bottom">
+                <!-- 标题 -->
+                <view class="title">{{item.articleTitle||item.title}}</view>
+                <!-- 文章开头 -->
+                <view class="text">{{item.articleText}}</view>
+            </view>
+        </view>
+        </navigator>
+       </block>
+       <block wx:if="{{articleList.length==0}}">
+        <view class="kong_box">
+            <image class="find_kong" src="/assets/find_kong.png"></image>
+            <text>您搜索的世界不存在！或者跑丢了......</text>
+        </view>
+       </block>
+    </view>
+</view>

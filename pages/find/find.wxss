@@ -1,0 +1,108 @@
+Page{
+    height: 100%;
+}
+.layout {
+    width: 100%;
+    height: 100%;
+    padding: 26rpx;
+    box-sizing: border-box;
+    background-color: #eeeeee;
+}
+.search {
+    width: 100%;
+}
+/* 无效输入框 */
+.search .input-box1 {
+    width: 100%;
+    background-color: #fff;
+    border-radius:16rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search .input-box1 .img{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 30rpx;
+}
+.search .input-box1 .text{
+    font-size: 28rpx;
+}
+/* 有效输入框 */
+.search .input-box2 {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+}
+.search .input-box2 .left {
+    height: 80rpx;
+    border-radius: 16rpx;
+    flex-grow: 1;
+    background-color: #fff;
+    margin-right: 30rpx;
+    display: flex;
+    align-items: center;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.search .input-box2 .left .img{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 18rpx;
+}
+.search .input-box2 .left .quxiao{
+    margin-right: -10rpx;
+    padding: 20rpx;
+}
+/* 输入框光标颜色等 */
+.search .input-box2 .left .text{
+    font-size: 28rpx;
+    caret-color: rgb(0,178,106);
+    flex-grow: 1;
+}
+/* 取消按钮 */
+.input-box2 .right .quxiao {
+    padding: 0;
+    width:100rpx;
+    font-size: 28rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-weight: normal;
+    background: linear-gradient(to right,rgb(0, 110, 255),rgb(0, 162, 255));
+    color: white;
+    border-radius: 16rpx;
+}
+/* 历史记录 */
+.search .history {
+    width: 100%;
+}
+.history .title {
+    width: 100%;
+    margin: 30rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title .clear {
+    font-size: 24rpx;
+    color: #838383;
+}
+.history .bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.history .history-list {
+    /* width: 100rpx; */
+    height: 30rpx;
+    padding: 20rpx;
+    margin: 10rpx;
+    text-align: center;
+    line-height: 30rpx;
+    border-radius: 10rpx;
+    background-color: rgb(214, 212, 212);
+    font-size: 24rpx;
+    color: #838383;
+}

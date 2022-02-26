@@ -1,0 +1,18 @@
+<!--components/detail.wxml-->
+<view class="layout">
+    <block wx:for="{{classifyList}}" wx:key="index">
+        <navigator url="/pages/articleList/articleList?id={{item._id}}">
+            <view class="list-box" >
+            <!-- 图片 -->
+            <view class="picture">
+                <image class="img" mode="aspectFill" src="{{item.backImage}}"></image>
+            </view>
+            <!-- 标题 -->
+            <view class="text">
+                <text class="title">{{item.title}}</text>
+                <text class="count">数量：{{item.articleList.length}}</text>
+            </view>
+        </view>
+        </navigator>
+    </block>
+</view>

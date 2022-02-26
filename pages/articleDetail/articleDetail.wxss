@@ -1,0 +1,176 @@
+Page {
+    height: 100%;
+}
+/* 整体 */
+.layout {
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+}
+/* 详情 */
+.detail{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow:scroll;
+}
+/* 头部 */
+.test-1{
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    line-height: 170rpx;
+    font-size: 28rpx;
+    z-index: 100;
+}
+/* 头部返回按钮 */
+.test-1 .fanhui {
+    position: absolute;
+    height: 40rpx;
+    width: 40rpx;
+    vertical-align: middle;
+    top: 65rpx;
+    left: 20rpx;
+}
+/* 单独返回按钮 */
+.detail .return{
+    position: fixed;
+    height: 60rpx;
+    width: 100rpx;
+    background-color: rgba(255, 255, 255,.5);
+    top: 50rpx;
+    left: 30rpx;
+    border-radius: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detail .return .return-btn{
+    height: 40rpx;
+    width: 40rpx;
+}
+/* 背景图 */
+.detail .backimg {
+    width: 100%;
+    height: 380rpx;
+}
+/* 文章内容 */
+.detail .content {
+    position: absolute;
+    top: 320rpx;
+    width: 100%;
+    background-color: #fff;
+    border-top-right-radius: 40rpx;
+    border-top-left-radius: 40rpx;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+/* 标题 */
+.detail .content .title {
+    font-weight: bold;
+    font-size: 34rpx;
+    margin: 40rpx 0;
+}
+/* 内容 */
+.detail .content .neirong {
+    width: 100%;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+/* 内容文字 */
+.detail .content .neirong .text {
+    margin: 20rpx 0;
+    font-size: 26rpx;
+    
+}
+/* 内容照片 */
+.detail .content .neirong .content-img {
+    width: 100%;
+    margin: 10rpx 0;
+    border-radius: 10rpx;
+}
+/* 系列与收藏按钮 */
+.detail .content .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 系列按钮 */
+.detail .content .btn .type {
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+    height: 35rpx;
+    width: 100rpx;
+    background-color: #e0e0e0;
+    font-size: 18rpx;
+    text-align: center;
+    line-height: 35rpx;
+    padding: 10rpx 20rpx;
+    color: #424242;
+    border-radius: 8rpx;
+}
+/* 收藏按钮 */
+.detail .content .btn .like {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130rpx;
+    height: 60rpx;
+    /* background-color: skyblue; */
+    font-size: 30rpx;
+    color: #8a8a8a;
+    margin-right: 12rpx;
+}
+.content .btn .like .like-icon {
+    height: 55rpx;
+    width: 55rpx;
+}
+/* 推荐文章 */
+.detail .content .about {
+    width: 100%;
+}
+.detail .content  .about .about-title{
+    width: 100%;
+    font-size: 28rpx;
+    margin: 50rpx 0;
+}
+.detail .content .about .about-list{
+    margin: 25rpx 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .about .about-list .left{
+    width: 130rpx;
+    height: 110rpx;
+    margin-right: 30rpx;
+}
+.about-list .left .img{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 15rpx;
+}
+.about .about-list .right{
+    flex-grow: 1;
+    height: 110rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-list .right .top{
+    font-size: 24rpx;
+}
+.about-list .right .bottom{
+    width: 100%;
+    font-size: 18rpx;
+    color: #bdbdbd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

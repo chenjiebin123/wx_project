@@ -1,0 +1,39 @@
+<view class="layout">
+    <view class="search">
+        <block wx:if="{{show}}">
+        <!-- 原始输入框 -->
+            <view class="input-box1" bindtap="showSearch">
+                <image class="img" src="../../assets/search.png"></image>
+                <input class="text" type="text"   placeholder="搜索一下，爱上这个世界"></input>
+            </view>
+        </block>
+        <block wx:if="{{!show}}">
+            <view class="input-box2">
+                <view class="left">
+                    <image class="img" src="../../assets/search.png"></image>
+                    <!-- 搜索输入框 -->
+                    <input class="text" bindconfirm="enter" bindinput="inputCont" model:value="{{cont}}" type="text" placeholder="搜索一下，爱上这个世界"></input>
+                    <block wx:if="{{clear_flag}}">
+                        <image bindtap="clearInput" class="img quxiao" src="../../assets/quxiao.png"></image>
+                    </block>
+                </view>
+                <!-- 取消按钮 -->
+                <view class="right">
+                    <button bindtap="hideSearch" class="quxiao">取消</button>
+                </view>
+            </view>
+        </block>
+        <!-- 搜索历史记录 -->
+        <view class="history">
+            <view class="title">
+                <view>历史记录</view>
+                <view class="clear" bindtap="clearHistory">清空记录</view>
+            </view>
+           <view class="bottom">
+            <block wx:for="{{findHistory}}" wx:key="index">
+                <view class="history-list" bindtap="tofind" data-text="{{item}}">{{item}}</view>
+            </block>
+            </view>
+        </view>
+    </view>
+</view>

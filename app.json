@@ -1,0 +1,52 @@
+{
+  "cloud":true,
+  
+  "pages":[
+    "pages/index/index",
+    "pages/special/special",
+    "pages/find/find",
+    "pages/person/person",
+    "pages/xingqiu/xingqiu",
+    "pages/articleList/articleList",
+    "pages/articleDetail/articleDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Blog",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1296db",
+    
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/assets/home_off.png",
+      "selectedIconPath": "/assets/home_on.png"
+    },
+      {
+      "pagePath": "pages/special/special",
+      "text": "专题",
+      "iconPath": "/assets/special_off.png",
+      "selectedIconPath": "/assets/special_on.png"
+    },
+      {
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "/assets/find_off.png",
+      "selectedIconPath": "/assets/find_on.png"
+    },
+      {
+      "pagePath": "pages/person/person",
+      "text": "我的",
+      "iconPath": "/assets/person_off.png",
+      "selectedIconPath": "/assets/person_on.png"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

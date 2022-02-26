@@ -1,0 +1,87 @@
+Page {
+    height: 100%;
+}
+
+.articleList {
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+}
+/* 列表盒子 */
+.list-box {
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+/* 显示，搜索为空 */
+.list-box .kong_box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* 显示，搜索为空的图片 */
+.list-box .kong_box .find_kong {
+    width: 400rpx;
+    height: 400rpx;
+    margin-bottom: 160rpx;
+}
+/* 显示，搜索为空的文字 */
+.list-box .kong_box text {
+    font-size: 30rpx;
+    width: 400rpx;
+    height: 400rpx;
+    color: #9b9b9b;
+}
+/* 列表详情 */
+.list-box .detail {
+    /* height: 450rpx; */
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 20rpx;
+    overflow: hidden;
+    margin: 30rpx 0;
+}
+/* 头部，图片 */
+.detail .top {
+    height: 260rpx;
+    width: 100%;
+    /* background-color: red; */
+}
+/* 图片 */
+.detail .top .img {
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    border-radius: 20rpx;
+}
+/* 底部，文字 */
+.detail .bottom {
+    width: 100%;
+    /* height: 190rpx; */
+    /* background-color: skyblue; */
+    padding: 0 30rpx 30rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* 标题 */
+.detail .bottom .title {
+    width: 100%;
+    margin: 20rpx 0;
+}
+/* 内容 */
+.detail .bottom .text {
+    width: 100%;
+    font-size: 26rpx;
+    color: #a0a0a0;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

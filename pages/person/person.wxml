@@ -1,0 +1,83 @@
+<view class="layout">
+    <block wx:if="{{hasUserInfo}}">
+        <view class="person">
+            <image class="backimg" src="/assets/backimg.png"></image>
+            <view class="content">
+                <!-- 用户信息 -->
+                <view class="user">
+                    <view class="user-left">
+                        <view class="user-tx">
+                            <!-- <open-data type="userAvatarUrl"></open-data> -->
+                            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                        </view>
+                    </view>
+                    <view class="user-right">
+                        <view class="top">
+                            <view class="user-name">
+                                <!-- <open-data type="userNickName"></open-data> -->
+                                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                            </view>
+                        </view>
+                        <view class="bottom">
+                            <view class="text">青春里的温柔一定与你相关</view>
+                            <button class="gengxing">更新</button>
+                        </view>
+                    </view>
+                </view>
+                <!-- 导航栏 -->
+                <view class="other">
+                    <view class="nav-top">
+                        <block wx:for="{{navList}}" wx:key="item.id">
+                            <view class="nav-list-box" data-id="{{item.id}}" bindtap="tobar">
+                                <image class="img" src="{{item.src}}"></image>
+                                <view class="text">{{item.text}}</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <!-- 其他功能 -->
+                <view class="gongneng">
+                    <!-- 清除缓存 -->
+                    <view class="clear" bindtap="clear">
+                        <view class="clear-left">
+                            <image class="left-icon" src="/assets/person-clear.png"></image>
+                            <view class="left-text">清除缓存</view>
+                        </view>
+                        <view class="clear-right">
+                            <image class="right-icon" src="/assets/return-right.png"></image>
+                        </view>
+                    </view>
+                    <!-- 关于程序 -->
+                    <view class="about">
+                        <view class="about-left">
+                            <image class="left-icon" src="/assets/person-about.png"></image>
+                            <view class="left-text">关于我们</view>
+                        </view>
+                        <view class="about-right">
+                            <image class="right-icon" src="/assets/return-right.png"></image>
+                        </view>
+                    </view>
+                    <!-- 退出登录 -->
+                    <view class="exit" bindtap="exit">
+                        <view class="exit-left">
+                            <image class="left-icon" src="/assets/person-exit.png"></image>
+                            <view class="left-text">退出登录</view>
+                        </view>
+                        <view class="exit-right">
+                            <image class="right-icon" src="/assets/return-right.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="login">
+            <image class="login_backimg" src="/assets/login-backimg.png"></image>
+            <!-- <button class="login_btn">登录</button> -->
+            <button wx:if="{{canIUseGetUserProfile}}" class="login_btn" bindtap="getUserProfile"> 登录 </button>
+                <button wx:else open-type="getUserInfo" class="login_btn" bindgetuserinfo="getUserInfo"> 登录 </button>
+        </view>
+    </block>
+    
+</view>

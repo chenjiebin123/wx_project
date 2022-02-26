@@ -1,0 +1,244 @@
+Page {
+    height: 100%;
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+}
+/* 登陆后的页面 */
+.person {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* 背景图 */
+.backimg {
+    width: 100%;
+    height: 360rpx;
+}
+/* 内容 */
+.content {
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    position: absolute;
+    top: 300rpx;
+}
+/* 用户信息 */
+.content .user {
+    background-color: rgb(255, 255, 255);
+    height: 200rpx;
+    width: 100%;
+    border-radius: 20rpx;
+    margin-bottom: 30rpx;
+    display: flex;
+    align-items: center;
+    padding: 30rpx 0;
+    box-sizing: border-box;
+}
+.user .user-left {
+    width: 120rpx;
+    height: 120rpx;
+    /* background-color:red; */
+    margin: 0 30rpx;
+}
+.user-left .user-tx {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user-left .user-tx .userinfo-avatar {
+    width: 100%;
+    height: 100%;
+}
+.user .user-right {
+    margin: 0 30rpx;
+    flex-grow: 1;
+    height: 120rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.user-right .top .user-name {
+    font-size: 42rpx;
+}
+.user-right .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.user-right .bottom .text {
+    font-size: 24rpx;
+    color: #686868;
+}
+.user-right .bottom .gengxing {
+    height: 45rpx;
+    width: 120rpx;
+    font-size: 25rpx;
+    color: white;
+    text-align: center;
+    line-height: 45rpx;
+    border-radius: 45rpx;
+    background: linear-gradient(to right,rgb(0, 110, 255),rgb(0, 204, 255));
+    padding: 0;
+    margin: 0;
+}
+/* 导航栏 */
+.content .other {
+    background-color: rgb(255, 255, 255);
+    height: 160rpx;
+    width: 100%;
+    border-radius: 20rpx;
+    margin-bottom: 30rpx;
+}
+.other .nav-top {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-top .nav-list-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-top .nav-list-box .img {
+    height: 70rpx;
+    width: 70rpx;
+    margin-bottom: 16rpx;
+    vertical-align: middle;
+}
+
+.nav-top .nav-list-box .text {
+    font-size: 26rpx;
+    text-align: center;
+    color: #a3a3a3;
+}
+/* 其他功能 */
+.content .gongneng {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 20rpx;
+    margin-bottom: 30rpx;
+    padding: 15rpx 30rpx 15rpx 30rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.gongneng .clear,.gongneng .about,.gongneng .exit {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    margin: 20rpx 0;
+    
+}
+/* 清除缓存 */
+.clear-left{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.clear-left .left-icon{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 30rpx;
+}
+.clear-left .left-text{
+    font-size: 27rpx;
+}
+.clear-right{
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clear-right .right-icon {
+    height: 40rpx;
+    width: 40rpx;
+}
+/* 关于 */
+.gongneng .about {}
+.about-left{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.about-left .left-icon{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 30rpx;
+}
+.about-left .left-text{
+    font-size: 27rpx;
+}
+.about-right{
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-right .right-icon {
+    height: 40rpx;
+    width: 40rpx;
+}
+/* 退出 */
+.gongneng .exit {}
+.exit-left{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.exit-left .left-icon{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 30rpx;
+}
+.exit-left .left-text{
+    font-size: 27rpx;
+}
+.exit-right{
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exit-right .right-icon {
+    height: 40rpx;
+    width: 40rpx;
+}
+/* 登录前的页面 */
+.layout .login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.layout .login .login_backimg{
+    height: 480rpx;
+    width: 480rpx;
+}
+.layout .login .login_btn{
+    height: 90rpx;
+    width: 480rpx;
+    border-radius: 90rpx;
+    color: white;
+    line-height: 90rpx;
+    padding: 0;
+    font-weight:500;
+    background-color: rgb(108, 156, 247);
+}

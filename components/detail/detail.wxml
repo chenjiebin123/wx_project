@@ -1,0 +1,11 @@
+<!--components/detail.wxml-->
+<view class="layout">
+    <view class="list-box">
+        <view class="picture">
+            <image class="img" mode="aspectFill"  src="{{message.backImg}}"></image>
+        </view>
+        <view class="text">
+            <text>{{message.title}}</text>
+        </view>
+    </view>
+</view>

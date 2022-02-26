@@ -1,0 +1,77 @@
+<view class="layout">
+    <!-- 轮播图 -->
+    <view class="banner">
+        <swiper autoplay="true" interval="3000" duration="1000" circular="true">
+            <block wx:for="{{bannerArr}}" wx:key="item._id">
+                <navigator url="/pages/articleDetail/articleDetail?id={{item.listId}}&listId={{item.classifyType.typeId}}">
+                    <swiper-item>
+                        <image class="img" src="{{item.fileID}}"></image>
+                    </swiper-item>
+                </navigator>
+            </block>
+        </swiper>
+    </view>
+    <!-- 导航栏 -->
+    <view class="nav">
+        <view class="nav-top">
+            <block wx:for="{{navList}}" wx:key="item.id">
+                <view class="nav-list-box" data-id="{{item.id}}" bindtap="tobar">
+                    <image class="img" src="{{item.src}}"></image>
+                    <view class="text">{{item.text}}</view>
+                </view>
+            </block>
+        </view>
+        <view class="nav-bottom">
+            <image class="nav-bottom-img" src="/assets/chatu.png"></image>
+            <text>☻ 做梦嘛就要做大点</text>
+            <view class="btn">分享</view>
+        </view>
+    </view>
+    <!-- 走马灯 -->
+    <view class="textMove">
+        <image class="img" src="/assets/logo.png"></image>
+        <view class="text-box">
+            <view class="textMove-text" style="{{tran_flag}}">{{ts_text}}</view>
+        </view>
+    </view>
+    <!-- 焦点 -->
+    <view class="hot">
+        <view class="title">
+            <view class="title-left">
+                <image src="/assets/jiaodian.png" mode="aspectFill" class="img"></image>焦点
+            </view>
+            <view class="title-right">查看更多<image src="/assets/return-right.png" class="img"></image>
+            </view>
+        </view>
+        <view class="contentList">
+            <view>
+                <view class="contentList-top">
+                    <image src="/assets/list1.jpg" class="contentList-top-img"></image>
+                </view>
+                <view class="contentList-bottom">
+                    <view class="contentList-bottom-title">浏览器插件硬核软件分享</view>
+                    <view class="contentList-bottom-jieshao">以实操突破百度网盘下载速度慢的问题顶顶顶顶顶</view>
+                </view>
+            </view>
+            <view></view>
+            <view></view>
+        </view>
+    </view>
+    <!-- 最新文章 -->
+    <view class="articleList">
+        <view class="title">
+            <view class="title-left">
+                <image src="/assets/wenzhang.png" class="img"></image>最新文章
+            </view>
+            <view class="title-right" bindtap="toSpecial">查看更多<image src="/assets/return-right.png" class="img"></image>
+            </view>
+        </view>
+        <view class="list">
+            <block wx:for="{{newArticle}}" wx:key="{{item._id}}">
+                <navigator url="/pages/articleDetail/articleDetail?id={{item._id}}&listId={{item.classifyType.listId}}">
+                    <detail-list message="{{item}}"></detail-list>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>

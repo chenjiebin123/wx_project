@@ -1,0 +1,60 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/find/find",
+                    "pathName": "pages/find/find",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/person/person",
+                    "pathName": "pages/person/person",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/special/special",
+                    "pathName": "pages/special/special",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/xingqiu/xingqiu",
+                    "pathName": "pages/xingqiu/xingqiu",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/articleList/articleList",
+                    "pathName": "pages/articleList/articleList",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/articleDetail/articleDetail",
+                    "pathName": "pages/articleDetail/articleDetail",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

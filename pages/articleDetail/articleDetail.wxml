@@ -1,0 +1,64 @@
+<view class="layout">
+    <scroll-view class="detail" scroll-y="true">
+        <!-- 标题头部 -->
+        <block wx:if="{{top_falg}}">
+            <view class="test-1">
+                <image class="fanhui" bindtap="returnBack" src="/assets/return-left.png"></image>
+                文章详情
+            </view>
+        </block>
+        <!-- 返回按钮 -->
+        <view wx:if="{{!top_falg}}" class="return" bindtap="returnBack">
+            <image class="return-btn" src="/assets/return-left.png"></image>
+        </view>
+        <!-- 背景图片 -->
+        <image class="backimg" mode="aspectFill" src="{{articleData.backImg}}"></image>
+        <!-- 文章内容 -->
+        <view class="content" bindtouchmove="boxscroll">
+            <!-- 文章标题 -->
+            <view class="title">{{articleData.title}}</view>
+            <!-- 文章内容 -->
+            <view class="neirong">
+                <block wx:for="{{articleData.list_content}}" wx:key="index">
+                    <block wx:if="{{item.neirongtype=='text'}}">
+                        <view class="text">{{item.content}}</view>
+                    </block>
+                    <block wx:if="{{item.neirongtype=='image'}}">
+                        <image src="{{item.url}}" mode="widthFix" class="content-img" data-imgstr="{{item.url}}" bindtap="lookimg"></image>
+                    </block>
+                </block>
+            </view>
+            <!-- 文章属性 -->
+            <view class="btn">
+                <navigator url="/pages/articleList/articleList?id={{articleData.classifyType.listId}}">
+                    <view class="type">
+                        {{articleData.classifyType.type}}
+                    </view>
+                </navigator>
+                <view class="like">
+                    <image class="like-icon" src="/assets/like-no.png"></image> 收藏
+                </view>
+            </view>
+            <!-- 推荐文章 -->
+            <view class="about">
+                <view class="about-title">相关标签文章</view>
+                <block wx:for="{{articleList}}">
+                    <navigator url="/pages/articleDetail/articleDetail?id={{item.id}}&listId={{listId}}">
+                        <view class="about-list">
+                            <view class="left">
+                                <image class="img" src="{{item.backImage}}"></image>
+                            </view>
+                            <view class="right">
+                                <view class="top">{{item.articleTitle}}</view>
+                                <view class="bottom">推荐阅读</view>
+                            </view>
+                        </view>
+                    </navigator>
+                </block>
+            </view>
+        </view>
+
+
+        <!-- </view> -->
+    </scroll-view>
+</view>

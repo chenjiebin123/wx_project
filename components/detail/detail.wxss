@@ -1,0 +1,44 @@
+/* components/detail.wxss */
+.layout {
+    width: 100%;
+    height: 360rpx;
+    margin-top: 30rpx;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.list-box {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.list-box .picture {
+    height: 75%;
+    width: 100%;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.picture .img {
+    height: 100%;
+    width: 100%;
+}
+
+.list-box .text {
+    width: 100%;
+    height: 25%;
+    padding: 16rpx 20rpx 0;
+    box-sizing: border-box;
+}
+
+.text text {
+    display: block;
+    width: 100%;
+    height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    font-size: 28rpx;
+    /* background-color: red; */
+}

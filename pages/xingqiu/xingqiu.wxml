@@ -1,0 +1,12 @@
+<view class="xingqiu">
+    <view class="list">
+        <block wx:for="{{classifyList}}" wx:key="{{item._id}}">
+            <navigator url="/pages/articleList/articleList?id={{item._id}}">
+                <view class="detail">
+                    <view class="icon"></view>
+                    <view class="text">{{item.title}}</view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</view>

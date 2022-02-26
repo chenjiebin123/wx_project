@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "detail-list":"/components/detail/detail"
+  },
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#eeeeee"
+}
